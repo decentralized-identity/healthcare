@@ -2,6 +2,7 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/AT6AewnkTmWkJhM2Bq8a-g/badge)](https://hackmd.io/AT6AewnkTmWkJhM2Bq8a-g)
 
+{ [mailing list](https://lists.identity.foundation/g/healthcare-sig) | [zoom link](https://us02web.zoom.us/j/88371822694?pwd=YnZvcXduYWdPSG8zOWlJSEE4Umwwdz09) }
 
 ### January 13th, 2021 - LAST MEETING AT OLD TIME 5pm Wednesdays (same time as biweekly on intervening weeks)
 
