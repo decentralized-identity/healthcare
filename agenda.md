@@ -4,6 +4,10 @@
 
 { [mailing list](https://lists.identity.foundation/g/healthcare-sig) | [zoom link](https://us02web.zoom.us/j/88371822694?pwd=YnZvcXduYWdPSG8zOWlJSEE4Umwwdz09) }
 
+### February 10, 2021 - **Note new time: 7am Pacific, 4pm CET**
+
+### January 27, 2021 - **Note new time: 7am Pacific, 4pm CET** - Guest Stephan Baur (Kaiser Permanente) will be speaking about approaching decentralized identity as a "utility" rather than a set of commercial products, and the vicissitudes of medical research funding.
+
 ### January 13th, 2021 - LAST MEETING AT OLD TIME 5pm Wednesdays (same time as biweekly on intervening weeks)
 
 ### List of topics and guests 2020: 
