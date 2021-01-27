@@ -8,7 +8,7 @@
 * 
 
 ### January 27, 2021 - **Note new time: 7am Pacific, 4pm CET**
- * Recording (forthcoming)
+ * [Recording](https://us02web.zoom.us/rec/share/0NC365kjRUrWNMqOxrMrt6V0Us4Cylb7UkQmLPKph8PsmnrXH56mZPm6krKndQQI.TLUILPB-lTFci9mr)
  * Overview of the problem space (smart contracts and trust ecosystems)
     * B2B: DSCSA (Spherity!); Allied Clinicial Access (?), Federated Learning Coordination (OpenMined?)
     * B2C/E: Vaccination Proofs; Ecosystem-Consumer; Clinician Credentialling; eligibility/proof of coverage
