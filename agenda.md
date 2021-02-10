@@ -5,7 +5,63 @@
 { [mailing list](https://lists.identity.foundation/g/healthcare-sig) | [zoom link](https://us02web.zoom.us/j/88371822694?pwd=YnZvcXduYWdPSG8zOWlJSEE4Umwwdz09) }
 
 ### February 10, 2021 - **Note new time: 7am Pacific, 4pm CET** - FHIR and OCA (with some talk about CCI& VCI)
-* Guests: Burak Serdar (Privacy Cloud Labs) and John Walker (Linux Foundation Public Health)
+* Guests: Burak Serdar (Cloud Privacy Labs) and John Walker (Linux Foundation Public Health/Covid Credentials Initiative)
+* Recording
+
+Topics discussed:
+
+<details>
+<summary>Minutes</summary>
+
+![](https://i.imgur.com/JeBaiIq.png)
+
+
+* John Walker
+    * JSON --> JSON-LD --> OCA
+* Burak Serdar 
+    * OCA originally conceived as a data CAPTURE mechanism, but I have been involved for a while applying it to privacy use cases
+* John's overview of [FHIR](http://hl7.org/fhir/)
+    - protocol for HL7 (4th iteration of it)
+    - JSON/JSON Schema-based
+    - EPIC and Cerner (sp?) are actually more installed in the wild; FHIR still a minority 
+        pipe-separated messaging structure 
+    - EHR and Health Info Exchanges use it as best-practice messaging protocol
+        - SMART on FHIR (boston group and Josh Mandell)- OAuth2 + JSON interface and transport for FHIR
+    - Our work starts from the assumption that personal health info is accessible via SMART on FHIR
+        - extracting and exchanging data in 
+    - As with any open community, there's tons of development happening here; one strategy that we have decided on is to leverage validation and data structure definitions, and not reinvent any of this or create new opacity  
+* VCI 
+    - proposed architecture SMART on FHIR endpoint with FHIR endpoint
+* Data Mechanics
+    - OCA consumes the data and applies overlays and hashes and locks it to be tamperproof 
+* Burak's overview of [OCA work] and [FHIR work](https://wiki.trustoverip.org/display/HOME/FHIR+Focus+Group) at ToIP
+    - see also [Privacy and Risk Task Force]()
+    - Overlay architecture structures FLAT data, tho-- but FHIR is very graphed, and "circularly linked"
+    - Complex mapping of OCA to FHIR, that I've [been working on](https://github.com/bserdar/jsonschema2oca), reshapes this
+        - This enables *transformations* and overlays onto FHIR messages
+        - I've also worked on an [OCA projection protoype](/oca-projection-prototype/)
+* John - LD versus JWT - We're working on FHRI --> LD --> JWTs 
+* Q and A
+    - Programmer could convert to and from LD the programmer could do on the server side? Does OCA enable client-side ZKP?
+        - 2 use cases:
+        1. EHR --> LD (apply your own schemata, apply ZKP) --> credentials (you'd need an agent before it goes to a wallet); there's value in making a generalized approach for transparently and accurately get health records into an LD format and out of "FHIRland" - tamperproofed 
+        2. ??
+        - Burak: 
+        1. OCA can be presentation layer on extracted FHIR data
+        2. But there's another use case where OCA can help translate server-to-server
+        - John: I might download my own health records and put them in a POD, or a PDS-- how do I get my health records into my own controlled storage; 
+    - John: Once you pull data out of EHR, it's read-only (that's the authoritative system of record)-- we just want to give people control over their own copy of that
+        - what about the deltas? That's further down the roadmap
+    - Burak: Complementary approach: extending OCA to "Projection" - more "end to end", allows governing authorities to define not just the LD Schema for issuance of creds but also the FHIR conversation end to end
+    - Schema work - Ontology happening (early days; Mattr leading it?)
+- Stephan - FHIR has no idea of doctor's DID and patient's DID
+    - Stephan: Josh's VCI is poking in that direction: ISO unification of business processes could hold EHR and hospitals to best-practices of switching their ID records to SSI envelopes and identities and tooling...
+    - Stephan: Vaccination might be too shiny of an object to go after-- if this isn't done by June, will it go anywhere? What about other use-cases? What about health proofs for life insurance? Do you have other use-cases in mind for self-managed health proofs?
+        - John: We're not exploring them very actively, but we're open to them... (follow-up session!)
+
+    - Contacts: bserdar at computer dot org and  johnw dot cci at lfph dot io 
+
+</details>
 
 ### January 27, 2021 - **Note new time: 7am Pacific, 4pm CET**
  * [Recording](https://us02web.zoom.us/rec/share/0NC365kjRUrWNMqOxrMrt6V0Us4Cylb7UkQmLPKph8PsmnrXH56mZPm6krKndQQI.TLUILPB-lTFci9mr)
