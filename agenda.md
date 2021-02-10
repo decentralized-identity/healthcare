@@ -5,7 +5,7 @@
 { [mailing list](https://lists.identity.foundation/g/healthcare-sig) | [zoom link](https://us02web.zoom.us/j/88371822694?pwd=YnZvcXduYWdPSG8zOWlJSEE4Umwwdz09) }
 
 ### February 10, 2021 - **Note new time: 7am Pacific, 4pm CET** - FHIR and OCA (with some talk about CCI& VCI)
-* 
+* Guests: Burak Serdar (Privacy Cloud Labs) and John Walker (Linux Foundation Public Health)
 
 ### January 27, 2021 - **Note new time: 7am Pacific, 4pm CET**
  * [Recording](https://us02web.zoom.us/rec/share/0NC365kjRUrWNMqOxrMrt6V0Us4Cylb7UkQmLPKph8PsmnrXH56mZPm6krKndQQI.TLUILPB-lTFci9mr)
