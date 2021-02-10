@@ -4,17 +4,31 @@
 
 { [mailing list](https://lists.identity.foundation/g/healthcare-sig) | [zoom link](https://us02web.zoom.us/j/88371822694?pwd=YnZvcXduYWdPSG8zOWlJSEE4Umwwdz09) }
 
+### February 24, 2021 - ??
+
 ### February 10, 2021 - **Note new time: 7am Pacific, 4pm CET** - FHIR and OCA (with some talk about CCI& VCI)
 * Guests: Burak Serdar (Cloud Privacy Labs) and John Walker (Linux Foundation Public Health/Covid Credentials Initiative)
-* Recording
+* [Recording](https://us02web.zoom.us/rec/share/z9ridVGc3JvKEmSJxyqB6RCJUvfLgGTCq9eYN1BgbTezdOybdH-qt039J_J_QVd-.jih7A7M72ZIIFgkh)
 
 Topics discussed:
+- Layman's history of and intro to FHIR, SMART on FHIR, and LH7 protocols
+- Description of the fundamental technical problem: getting secure, trustworthy medical records out of an EHR system, via FHIR, into a maximally portable VC that's just as trustworthy (while not the system of record for that patient)
+- Two approaches prototyped by the same task force at ToIP:
+    - VCI: FHIR --> LD --> OCA --> VC format of choice (depicted in minutes)
+    - Burak's more end-to-end solution, allowing trust authorities to specify the conversion from FHIR to VC Schemata of their design via OCA
+- Useful Links:
+    - Relevant ToIP task forces and WGs: [Semantic Domain](https://wiki.trustoverip.org/display/HOME/Semantic+Domain+Group) and [FHIR Focus Group](https://wiki.trustoverip.org/display/HOME/FHIR+Focus+Group), etc
+    - Other references: [Kantara BIT](https://kantarainitiative.org/confluence/display/WGISI/Blinding+Identity+Taxonomy), [FHIR](http://hl7.org/fhir/), commercial tooling vendors [EPIC](https://fhir.epic.com/)     
+
 
 <details>
 <summary>Minutes</summary>
 
+John's CCI/LFPH prototype:
 ![](https://i.imgur.com/JeBaiIq.png)
 
+Burak's prototypes for extending OCA to specify FHIR extraction:
+- [OCA projection](https://github.com/bserdar/oca-projection-prototype) and [JSON->OCA conversion prototype](https://github.com/bserdar/jsonschema2oca)
 
 * John Walker
     * JSON --> JSON-LD --> OCA
