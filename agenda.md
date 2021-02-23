@@ -72,9 +72,7 @@ Burak's prototypes for extending OCA to specify FHIR extraction:
     - Stephan: Josh's VCI is poking in that direction: ISO unification of business processes could hold EHR and hospitals to best-practices of switching their ID records to SSI envelopes and identities and tooling...
     - Stephan: Vaccination might be too shiny of an object to go after-- if this isn't done by June, will it go anywhere? What about other use-cases? What about health proofs for life insurance? Do you have other use-cases in mind for self-managed health proofs?
         - John: We're not exploring them very actively, but we're open to them... (follow-up session!)
-
     - Contacts: bserdar at computer dot org and  johnw dot cci at lfph dot io 
-
 </details>
 
 ### January 27, 2021 - **Note new time: 7am Pacific, 4pm CET**
@@ -92,6 +90,106 @@ Meetings
 * [Recording](https://us02web.zoom.us/rec/play/V6-9D-58vNJqPTC-LgYM5qOZEeysMhNiR5N984081C3UdK3NlgZjPWIvR2-WdvVDgBJn-7o2cnKsPcPH.cpBSPLqCv_Er46_0?continueMode=true&_x_zm_rtaid=W4Gs8hpwSsSgEyR-E6WQqA.1610303195103.8c3ac711d9bc16e4b8aca9a9c607f6b4&_x_zm_rhtaid=250) 2 December - Jim St. Clair ([Lumedic](https://www.lumedic.io/)), Philipp Page ([Human Colossus](https://humancolossus.foundation/)), and Paul Knowles ([Human Colossus](https://humancolossus.foundation/), [ToIP](https://trustoverip.org/)) on Trust Frameworks and Semantic Frameworks for medical data
 * [Recording](https://us02web.zoom.us/rec/share/HslRkFaYCu3JOuQDTSKQEHCe0HGUCivTASa-qdItJBMwdmZFZHBmWekgrYLLe_98.E0GRYb-RAlviCdoo) 18 November - Matthias de Bièvre ([MyData](https://mydata.org), [aNG](https://anewgovernance.org)) & Dominik Diemel ([Comuny.de](https://comuny.de)) on A New Governance and the regulatory landscape around human-centric medical data in Europe
 * [Recording](https://us02web.zoom.us/rec/play/gYcNhVZ9vIgkLJE-I7MKRheQjM3ZgM6aziRT3YCpb0j7FvzDykHRpHWHXL74a9f_OdzEZjbrliKHVLfW.pMk8S3vvBkpC8POf?continueMode=true&_x_zm_rtaid=W4Gs8hpwSsSgEyR-E6WQqA.1610303195103.8c3ac711d9bc16e4b8aca9a9c607f6b4&_x_zm_rhtaid=250) 4 November 2020 - Iain Henderson ([JLinc](https://www.jlinc.com/technology), [Mydata](https://mydata.org/)) on the MyData Commons project and the MyData Operators [whitepaper](https://mydata.org/wp-content/uploads/sites/5/2020/04/Understanding-Mydata-Operators-pages.pdf) and group
+
+<details><summary>Minutes</summary>
+
+- Self introduction:
+    - Consultant for the Scottish govt - advise startups and facilitate business thinking
+    - JLinc - Business side
+    - Very active in MyData -
+    - IIW
+- Intro - Data grabs & Surveillance Capitalism - Most but not all
+    - Confidential data - there are business niches where people DON'T want as much data as possible!
+- MyData Commons
+    - Blog post - Covid as trial by fire for our data ecosystem - we need global citizenship management process, but we don't have the infra for that
+    - Thesis early on: We need a commons, won't have it soon, but maybe in time for Covid-20
+    - April-may-june - MyData team in a Covid Hackathon - Personal data store for each individual - used JLinc for SSI and a SalesForce instance (had both on hand)
+    - Lessons from multiple hackathons
+![](https://i.imgur.com/Qb23MhZ.png)
+- Massive data problem- how can public health authorities get data about the asymptomatic, the healthy, and the mildly symptomatic? How can you get people to donate helpful data at scale?
+    - Symptom-tracking apps (i.e. [DataYogi.me](http://datayogi.me),
+    - Dummy data+SalesForce —> population-level analytics
+    - Integration of wallets and credentials (Digital Wallet JLinc integration) - just a prototype, not taken to market
+- MyData alignment/interop
+    - MyData - working on shared Schema for Operators group - a dictionary that can be consumed as LD, schema.org, OCA
+![](https://i.imgur.com/iHnusLc.png)
+- Last 6 months have taught me that
+    - 3 separate clients all coming to : current clients - 1 health, 2 in less sensitive areas
+        - leave data on device
+        - get ML models on depersonalized/anonymized
+        - openMined - analyze data without it leaving the subject's device
+![](https://i.imgur.com/LaVyHtn.png)
+    - "Notice & Consent doesn't scale" —John Wunderlich (JLinc, IIW)
+    - realtime co-management of data
+    - multi-directional, multi-stakeholder CRUD on all data
+    - "personal data logistics"
+- Q and A
+    - Bernard: Data quality in Covid Commons?
+        - Iain: Medics designed the system (HL7/FHIR)
+        - Iain: Self-Managed data tends to have lower incentive problems - individual managing own data and only-once-ing incentivizes honesty
+    - Bob: How does patient control their data sharing?
+        - Iain: SISA (written to ledger/immutable store!) —> contract law as enforcement rather than technical control of data
+        - Iain: JLinc's early work a chain of confidentially
+    - Bob: Accord project and CommonAccord? Attempting to take common legal language and standardize on it, make it more machine-readable (IEEE WG on machine-readable contracts as well)
+    - Iain: Individual can come to the info-sharing counterparty as a peer ;
+        - data quality and compliance are shot in status quo
+        - FAANG only people making money in current system
+    - Juan: PDS?
+        - Iain: Covid is driving home the problem of access to and control of each patient's healthcare records; UK example: high-level summary records are owned by NHS and shared automatically to all pharmacies; My contention is that the core record should be available to patient, AT LEAST through their covid app and build a bridge between their individual records and make better data available to public health records
+            - In statute, the NHS record is mine
+            - Children's "blue folders" (maternity records) and "red books" (birth - 5 records) are digital and shared; when they were in paper, it was under mother's control, but in being digitized, shared data
+            - MyData "DIDs for kids" didn't go very far, too scary to medical industry interlocutors
+    - Bernard: I want to understand role of ML in here
+        - This example was from self-asserted diet study— OpenMined was involved to help diet data be studied
+    - Bob: 4% of US medications are misdirected! 
+</details>
+
 * [Recording](https://us02web.zoom.us/rec/play/5RwzuV0Bg1rlVMWAULzc3VDnXs1dZMpm92WqOQUw_mw8eCuYdyO_w1e7Kwe74OBtMeUtlYHEcf1kQ7Q4.doYJdmeIyONV7PLw?continueMode=true&_x_zm_rtaid=W4Gs8hpwSsSgEyR-E6WQqA.1610303195103.8c3ac711d9bc16e4b8aca9a9c607f6b4&_x_zm_rhtaid=250) 21 October
 ) 21 October 2020 - Joost Flach & Mark van der Waal ([Triall.io](https://triall.io), NL) & Maarten Boender ([Sphereon](https://sphereon.com), NL) on decentralized clinical trials
 * [Recording](https://us02web.zoom.us/rec/play/b293wEn7oh7XnJeuUMBNT7VHFA5gzsogPt9R9NQ3dPoPSvrzfePtuFrrjYBSAErYNAVFCLnAIvYyXTvc.xwAjMsUbDSsw_lnE?continueMode=true&_x_zm_rtaid=W4Gs8hpwSsSgEyR-E6WQqA.1610303195103.8c3ac711d9bc16e4b8aca9a9c607f6b4&_x_zm_rhtaid=250) 7 October - Georg Jürgens ([Spherity](https://spherity.com/) GmbH) and Robert Celeste ([Center for Supply Chain Studies](https://www.c4scs.org/), USA) on VC use-cases in B2B pharmaceutical ecosystems, including Spherity's Authorized Trading Partner trial with SAP and Novartis. 
+
+<details>
+<summary>Minutes</summary>
+
+- Attendance/ Introductions
+    - Najib Rehman (??)
+        - working with a data integrator to support swiss pharma clients on CTs; DLT to speed things up a bit
+    - Willy (??)
+    - Leah Houston
+    - Bernard
+    - Catherine
+![](https://i.imgur.com/PBYgxGy.png)
+- Robert's presentation
+        - scale: billions of transactions in a 3-hour overnight crunch period
+        - trial generating valuable material and guidance for industry governance processes
+        - interaction of technical, operations, and compliance/governance groups
+        - API and Schemata —> starting point for standardization
+    - "This is an industry that runs on standards"
+        - GS1 for txn info and ids,
+        - Everyone obvi wants to look with the W3C standards
+            - all the examples in the spec are very consumer-based; bias and mental model
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c3cd24cf-2a3c-4e0c-9ffd-ccc02ef75187/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c3cd24cf-2a3c-4e0c-9ffd-ccc02ef75187/Untitled.png)
+- "Challenges"
+    - **Challenge #1:** Scale
+    - Standards and misfit b/w W3C as-is today and these use-cases
+    - **Challenge #2:** Retention req (6 year record-keeping obligation) —> binding VCs and VPs need to be archival/auditable for 6 years!
+        - VP ephemerality (in VC spec)
+        - **Lesson#1** Identifier ←→ Company name binding needs to be durable/archival
+    - **Challenge #3:** How does Company B know that A was handling credentials properly and according to industry and/or regulatory rules, if they just get a log or a recipt?
+        - Logging of credential exchanges? reusing credentials falsely, replay attacks, etc?
+        - Out of scope for now, but we're starting to look at the possibility of a third-party compliance auditor or guarantor? Do they attach additional VCs?
+![](https://i.imgur.com/7GSf3rb.png)
+- security risks
+    - drug cartel made 25 shell corps to hide infiltration in a drug supply chain
+        - mitigations of legal identity issues
+        - drug cartels have a big R&D budgets for impersonation, counterfeiting, etc— way more tech savvy than many supply chain actors such as smalltown pharmacies!
+- Q and A
+    - Najid: FMD (I used to work for Pfizer so I know the DCSCA and serialization!); what are your thoughts on B2B2P and P identity?
+    - Orphan disease area? Teaching hospital ... Therapies and vectors?
+    - Volume and complex stakeholders...
+    - Standards around labeling (tagging blood in loop); 200K-1.3m$ therapies! the liabilities (and stakes) are massive there
+    - How do we get everybody on board? Some people are incentivized for intransparency
+    - Bob: One of the pilots in the FDA program was a very expensive personalized drug: the roundtrip; temp control in transit; temperature indicator behind a bar code, so that bar code changed
+    - Georg: Novartis is looking into this for Kamriah; validated (manual) process for now
+    
+</details>
